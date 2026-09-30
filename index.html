@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brew Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- 1. App Header -->
+  <header class="site-header">
+    <div class="brand">☕ Brew Lab</div>
+    <nav class="site-nav"><a href="#menu">เมนู</a><a href="#cart">ตะกร้า</a><a href="#admin">หลังร้าน</a></nav>
+    <button class="btn btn--main" type="button">สั่งเลย</button>
+  </header>
+
+  <main class="page">
+
+    <!-- 4. Card row -->
+    <section id="menu">
+      <h2>เมนูแนะนำ</h2>
+      <div class="menu-list">
+        <article class="menu-card"><small>กาแฟ</small><h3>เอสเปรสโซ</h3><p>เข้ม หอม ช็อตเดียว</p></article>
+        <article class="menu-card"><small>ชา</small><h3>ชาไทยนมสด</h3><p>หวานมัน ชงสดทุกแก้ว</p></article>
+        <article class="menu-card"><small>เบเกอรี่</small><h3>ครัวซองต์เนย</h3><p>อบใหม่ทุกเช้า</p></article>
+        <article class="menu-card"><small>ปั่น</small><h3>มัทฉะปั่น</h3><p>ชาเขียวเข้มข้น</p></article>
+      </div>
+    </section>
+
+    <!-- 3 + 2. Order item + Toolbar -->
+    <section id="cart">
+      <h2>ตะกร้าของคุณ</h2>
+      <div class="cart">
+        <div class="order">
+          <div class="order__img">☕</div>
+          <div class="order__info"><h3>ลาเต้เย็น</h3><p>หวานน้อย ไม่ใส่วิป</p></div>
+          <div class="order__price">฿65</div>
+        </div>
+        <div class="order">
+          <div class="order__img">🥐</div>
+          <div class="order__info"><h3>ครัวซองต์เนย</h3><p>อุ่นให้ 1 ชิ้น</p></div>
+          <div class="order__price">฿55</div>
+        </div>
+        <div class="toolbar">
+          <div class="toolbar__group"><button class="btn" type="button">ยกเลิก</button><button class="btn" type="button">เลือกเมนูเพิ่ม</button></div>
+          <div class="toolbar__group"><button class="btn" type="button">เก็บไว้ก่อน</button><button class="btn btn--main" type="button">ชำระเงิน ฿120</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Dashboard shell -->
+    <section id="admin">
+      <h2>หลังร้าน</h2>
+      <div class="shop">
+        <aside class="shop__side">
+          <strong>☕ Brew Lab</strong>
+          <ul><li>ภาพรวม</li><li>ออเดอร์</li><li>สต็อก</li></ul>
+        </aside>
+        <section class="shop__main">
+          <div class="shop__top">
+            <h3>ยอดขายวันนี้</h3>
+            <button class="btn btn--main" type="button">+ เพิ่มเมนู</button>
+          </div>
+          <div class="kpis">
+            <div class="kpi">ออเดอร์<b>48</b></div>
+            <div class="kpi">รายได้<b>฿3,120</b></div>
+            <div class="kpi">ลูกค้าใหม่<b>9</b></div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- สูตรเลือก property -->
+    <section>
+      <h2>สูตรเลือกใช้ property</h2>
+      <table>
+        <thead><tr><th>ชิ้นงาน</th><th>container</th><th>จัดตำแหน่ง</th><th>ขนาด item</th></tr></thead>
+        <tbody>
+          <tr><td>App Header</td><td>.site-header</td><td>space-between + align-items: center</td><td>ตามเนื้อหา</td></tr>
+          <tr><td>Toolbar</td><td>.toolbar, .toolbar__group</td><td>space-between + gap</td><td>ตามเนื้อหา</td></tr>
+          <tr><td>Order Item</td><td>.order</td><td>align-items: center + gap</td><td>ข้อความ flex: 1, ไอคอน flex: none</td></tr>
+          <tr><td>Menu Cards</td><td>.menu-list</td><td>flex-wrap: wrap + gap</td><td>flex: 1 1 180px</td></tr>
+          <tr><td>Dashboard</td><td>.shop</td><td>สองคอลัมน์ในแถวเดียว</td><td>sidebar flex: 0 0 200px, main flex: 1</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+</body>
+</html>
